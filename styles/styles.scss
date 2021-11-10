@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("./icons/all.css");
+$amarillo_Oscuro: #ffb020;
+$amarillo_Claro: #ffd24d;
+$blanco: #fff;
+$blanco_background: #f4f6f7;
+$gris: #a6acaf;
+$fuente: #051226;
+
+@mixin gradiente_Amarillo {
+  background: linear-gradient(
+    to right,
+    $amarillo_Claro 0%,
+    $amarillo_Oscuro 100%
+  );
+}
+
+@mixin fondo_Formulario {
+  background: $blanco;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $fuente;
+  font-family: "Poppins", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+a {
+  color: $amarillo_Oscuro;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+input::placeholder {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: 15px;
+}
+.contenedor_Amarillo {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include gradiente_Amarillo;
+  .imagen {
+    height: 300px;
+    width: 100%;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.contenedor_Blanco {
+  width: 30%;
+  background: $blanco_background;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  form {
+    // position: absolute;
+    // background: $blanco;
+    height: fit-content;
+    // min-height: 350px;
+    @include fondo_Formulario();
+    padding: 30px 40px;
+    // width: 22em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    left: -180px;
+    h2 {
+      font-size: 19px;
+      text-align: center;
+    }
+    span {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}
+
+.formulario {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+
+  input,
+  button {
+    height: 40px;
+    width: 100%;
+  }
+  input {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border-style: none;
+    border: 2px solid rgba($gris, 0.5);
+    &:focus {
+      border-style: none;
+      outline: none;
+      border: 1px solid $amarillo_Claro;
+      box-shadow: 0 0 2px 2px rgba($amarillo_Oscuro, 0.8);
+    }
+  }
+  button {
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    position: relative;
+    margin: 10px 0px;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    @include gradiente_Amarillo;
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      content: "";
+      width: 0%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: inherit;
+      top: 0;
+      left: 0;
+      transition: all 0.5s ease;
+    }
+    &:hover:before {
+      width: 100%;
+    }
+  }
+  a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .imagen {
+    justify-content: flex-start !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .contenedor_Amarillo,
+  .contenedor_Blanco {
+    width: 100%;
+  }
+  .contenedor_Amarillo {
+    height: 70%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 0;
+
+    .imagen {
+      //   display: none;
+      padding: 0;
+      width: 100%;
+      min-height: 150px;
+      height: 40%;
+      max-height: 300px;
+      //   background: #051226;
+      display: flex;
+      justify-content: center !important;
+      img {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+  .contenedor_Blanco {
+    // height: 40% !important;
+    height: 30% !important;
+    margin-bottom: 0;
+    height: 100px;
+    display: flex;
+    form {
+      //   height: 100%;
+      position: relative;
+      width: 95%;
+      padding: 30px 0;
+      margin-top: 1000px;
+      margin: auto;
+      //   margin-bottom: 50px;
+      left: 0;
+      top: -50%;
+      background: none;
+      box-shadow: none;
+      h2,
+      span {
+        margin: 0 10px;
+      }
+    }
+  }
+  .formulario {
+    @include fondo_Formulario();
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .contenedor_Amarillo {
+    min-height: 0;
+    .imagen {
+      display: none;
+    }
+  }
+}

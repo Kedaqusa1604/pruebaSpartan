@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("./icons/all.css");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #051226;
+  font-family: "Poppins", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+a {
+  color: #ffb020;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+input::-webkit-input-placeholder {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: 15px;
+}
+
+input:-ms-input-placeholder {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: 15px;
+}
+
+input::-ms-input-placeholder {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: 15px;
+}
+
+input::placeholder {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.contenedor_Amarillo {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, right top, from(#ffd24d), to(#ffb020));
+  background: linear-gradient(to right, #ffd24d 0%, #ffb020 100%);
+}
+
+.contenedor_Amarillo .imagen {
+  height: 300px;
+  width: 100%;
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor_Amarillo .imagen img {
+  height: 100%;
+}
+
+.contenedor_Blanco {
+  width: 30%;
+  background: #f4f6f7;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor_Blanco form {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  left: -180px;
+}
+
+.contenedor_Blanco form h2 {
+  font-size: 19px;
+  text-align: center;
+}
+
+.contenedor_Blanco form span {
+  font-size: 12px;
+  text-align: center;
+}
+
+.formulario {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0px;
+}
+
+.formulario input,
+.formulario button {
+  height: 40px;
+  width: 100%;
+}
+
+.formulario input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  border: 2px solid rgba(166, 172, 175, 0.5);
+}
+
+.formulario input:focus {
+  border-style: none;
+  outline: none;
+  border: 1px solid #ffd24d;
+  -webkit-box-shadow: 0 0 2px 2px rgba(255, 176, 32, 0.8);
+          box-shadow: 0 0 2px 2px rgba(255, 176, 32, 0.8);
+}
+
+.formulario button {
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  position: relative;
+  margin: 10px 0px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background: -webkit-gradient(linear, left top, right top, from(#ffd24d), to(#ffb020));
+  background: linear-gradient(to right, #ffd24d 0%, #ffb020 100%);
+}
+
+.formulario button:hover {
+  cursor: pointer;
+}
+
+.formulario button:before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.formulario button:hover:before {
+  width: 100%;
+}
+
+.formulario a {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1200px) {
+  .imagen {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .contenedor_Amarillo,
+  .contenedor_Blanco {
+    width: 100%;
+  }
+  .contenedor_Amarillo {
+    height: 70%;
+    min-height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 20px 0;
+  }
+  .contenedor_Amarillo .imagen {
+    padding: 0;
+    width: 100%;
+    min-height: 150px;
+    height: 40%;
+    max-height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  .contenedor_Amarillo .imagen img {
+    height: 100%;
+    width: auto;
+  }
+  .contenedor_Blanco {
+    height: 30% !important;
+    margin-bottom: 0;
+    height: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contenedor_Blanco form {
+    position: relative;
+    width: 95%;
+    padding: 30px 0;
+    margin-top: 1000px;
+    margin: auto;
+    left: 0;
+    top: -50%;
+    background: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .contenedor_Blanco form h2,
+  .contenedor_Blanco form span {
+    margin: 0 10px;
+  }
+  .formulario {
+    background: #fff;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .contenedor_Amarillo {
+    min-height: 0;
+  }
+  .contenedor_Amarillo .imagen {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
